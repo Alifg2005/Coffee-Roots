@@ -35,6 +35,13 @@ body {
   font-size: 28px;
 }
 
+.logo-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%; /* makes it circular, remove if you don't want that */
+}
+
 .nav-links {
   display: flex;
   gap: 28px;
