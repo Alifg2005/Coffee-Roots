@@ -728,69 +728,79 @@ button {
 /* =============================
    FOOTER
    ============================= */
+/* Footer */
 .footer {
-  background: var(--brown-deep);
+  background-color: #2c1a0e;
   color: white;
-  padding: 60px 32px 0;
+  padding: 60px 60px 0;
 }
 
 .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
-  gap: 48px;
+  grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+  gap: 50px;
   padding-bottom: 48px;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer-brand .logo {
+.footer-logo {
   color: white;
-  margin-bottom: 14px;
-  display: inline-flex;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
 }
 
-.footer-brand p {
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.55);
-  max-width: 260px;
+.footer-logo .logo-img {
+  width: 40px;
+  height: 40px;
+}
+
+.brand-col p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
   line-height: 1.7;
+  margin-bottom: 12px;
+  max-width: 240px;
 }
 
-.footer-links {
+.brand-col small {
+  color: rgba(255,255,255,0.35);
+  font-size: 0.8rem;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.footer-col a {
+  color: rgba(255,255,255,0.6);
+  display: block;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-col a:hover {
+  color: white;
+}
+
+.footer-col p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+  line-height: 1.6;
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 
-.footer-links h4 {
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 4px;
-}
-
-.footer-links a {
-  font-size: 0.87rem;
-  color: rgba(255,255,255,0.55);
-  transition: color var(--transition);
-}
-
-.footer-links a:hover {
-  color: rgba(255,255,255,0.9);
-}
-
-.footer-bottom {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 0;
-  text-align: center;
-}
-
-.footer-bottom p {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.35);
+.footer-col p i {
+  margin-top: 3px;
+  color: #a0714f;
+  flex-shrink: 0;
 }
 
 /* =============================
