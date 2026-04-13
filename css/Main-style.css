@@ -174,14 +174,15 @@ button {
 }
 
 .cart-btn {
-  background: var(--brown-deep);
-  color: white;
+  background: var(--brown-mid);
+  color: white !important;;
   padding: 10px 12px;
   border-radius: var(--radius);
 }
 
 .cart-btn:hover {
-  background: var(--brown-mid);
+  
+  background: var(--brown-deep);
 }
 
 /* =============================
