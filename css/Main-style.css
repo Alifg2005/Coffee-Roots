@@ -243,12 +243,12 @@ button {
 }
 
 .btn-dark {
-  background: var(--brown-deep);
+  background: var(--brown-mid);
   color: white;
 }
 
 .btn-dark:hover {
-  background: var(--brown-mid);
+  background: var(--brown-deep);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px var(--shadow-strong);
 }
@@ -349,7 +349,7 @@ button {
    STATS STRIP
    ============================= */
 .stats-strip {
-  background: var(--brown-deep);
+  background: #2c1a0e;
   color: white;
   display: flex;
   justify-content: center;
@@ -550,7 +550,7 @@ button {
 }
 
 .add-btn {
-  background: var(--brown-deep);
+  background: var(--brown-mid);
   color: white;
   padding: 8px 18px;
   border-radius: var(--radius);
@@ -560,7 +560,7 @@ button {
 }
 
 .add-btn:hover {
-  background: var(--brown-mid);
+  background: var(--brown-deep);
   transform: translateY(-1px);
 }
 
