@@ -247,14 +247,20 @@ body {
 }
 
 .add-btn {
-  background-color: #6f5a3e;
+  background: var(--brown-mid);
   color: white;
   text-decoration: none;
   padding: 18px 30px;
-  border-radius: 14px;
+  border-radius: var(--radius);
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.add-btn:hover {
+  background: var(--brown-deep);
+  transform: translateY(-1px);
 }
 
 /* Table Section */
