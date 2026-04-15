@@ -326,7 +326,10 @@ body {
   background-color: #f2d9a6;
   color: #b36b00;
 }
-
+.zero-stock {
+  background-color: #d62207;
+  color: white;
+}
 .actions {
   display: flex;
   gap: 24px;
