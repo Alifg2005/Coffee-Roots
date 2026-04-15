@@ -496,10 +496,14 @@ button {
   position: relative;
 }
 
-.product-icon {
-  font-size: 3.5rem;
-  opacity: 0.55;
+
+.product-img-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
+
 
 .product-badge {
   position: absolute;
