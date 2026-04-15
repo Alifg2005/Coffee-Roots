@@ -267,7 +267,7 @@ button {
 }
 
 .btn-outline:hover {
-  background: var(--brown-deep);
+  background: var(--brown-mid);
   color: white;
   transform: translateY(-2px);
 }
