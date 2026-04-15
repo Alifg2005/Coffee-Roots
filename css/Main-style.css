@@ -21,7 +21,14 @@
   --radius-lg: 18px;
   --transition: 0.22s ease;
 }
-
+* { 
+    font-family: var(--font-serif);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+ }
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
