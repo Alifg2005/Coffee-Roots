@@ -178,6 +178,15 @@ body {
   color: var(--brown-mid);
 }
 
+.logout-btn {
+  font-size: 20px;
+}
+
+.logout-btn:hover {
+  background: var(--cream-dark);
+  color: var(--accent);
+}
+
 .cart-btn {
   background: var(--brown-mid);
   color: white !important;
