@@ -1,4 +1,4 @@
-
+/* MAIN STYLES */
 :root {
   --cream: #f5f0e8;
   --cream-dark: #ede6d6;
@@ -58,9 +58,7 @@ button {
   outline: none;
 }
 
-/* =============================
-   NAVBAR
-   ============================= */
+/*NAVBAR*/
 .navbar {
   background: var(--cream);
   border-bottom: 1px solid var(--border);
@@ -192,9 +190,7 @@ button {
   background: var(--brown-deep);
 }
 
-/* =============================
-   HERO SECTION
-   ============================= */
+/*HERO SECTION*/
 .hero {
   max-width: 1300px;
   margin: 0 auto;
@@ -285,9 +281,9 @@ button {
   box-shadow: 0 16px 48px var(--shadow-strong);
   width: 100%;
   max-width: 380px;
-  animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite; /* give animation for hero cards */
 }
-
+/* give animation for hero cards */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -355,9 +351,7 @@ button {
   color: var(--text-muted);
 }
 
-/* =============================
-   STATS STRIP
-   ============================= */
+/*STATS STRIP*/
 .stats-strip {
   background: var(--brown-deep);
   color: white;
@@ -397,9 +391,7 @@ button {
   background: rgba(255,255,255,0.18);
 }
 
-/* =============================
-   SECTION COMMON
-   ============================= */
+/* SECTION COMMON */
 .section-header {
   text-align: center;
   margin-bottom: 44px;
@@ -430,9 +422,7 @@ button {
   margin: 0 auto;
 }
 
-/* =============================
-   PRODUCTS SECTION
-   ============================= */
+/* PRODUCTS SECTION*/
 .products {
   max-width: 1300px;
   margin: 0 auto;
@@ -578,9 +568,7 @@ button {
   transform: translateY(-1px);
 }
 
-/* =============================
-   ABOUT SECTION
-   ============================= */
+/* ABOUT SECTION */
 .about {
   background: var(--cream-dark);
   padding: 90px 32px;
@@ -661,9 +649,7 @@ button {
   font-size: 1.1rem;
 }
 
-/* =============================
-   CONTACT SECTION
-   ============================= */
+/* CONTACT SECTION */
 .contact {
   max-width: 1100px;
   margin: 0 auto;
@@ -738,10 +724,7 @@ button {
   box-shadow: 0 0 0 3px rgba(160, 113, 79, 0.12);
 }
 
-/* =============================
-   FOOTER
-   ============================= */
-/* Footer */
+/* FOOTER */
 .footer {
   background-color: #2c1a0e;
   color: white;
@@ -820,9 +803,7 @@ button {
   flex-shrink: 0;
 }
 
-/* =============================
-   RESPONSIVE
-   ============================= */
+/* RESPONSIVE*/
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
