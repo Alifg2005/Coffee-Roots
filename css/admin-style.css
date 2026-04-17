@@ -731,6 +731,26 @@ body {
   background: var(--cream-dark);
   color: var(--accent);
 }
+/* Edit Product */
+.current-image {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.preview-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd6cf;
+}
+
+.current-image-label {
+  font-size: 0.85rem;
+  color: #7a6652;
+}
 
 @media (max-width: 700px) {
   .form-row {
