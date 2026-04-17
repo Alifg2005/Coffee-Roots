@@ -331,6 +331,24 @@ body {
   font-weight: bold;
 }
 
+.trash-can {
+  color: #e24d36;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--text-main);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), color var(--transition);
+}
+
+.trash-can:hover {
+  background: var(--cream-dark);
+  color: var(--accent);
+}
+
 .low-stock {
   background-color: #f2d9a6;
   color: #b36b00;
