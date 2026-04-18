@@ -45,11 +45,16 @@
   <main class="cart-section">
     <div class="cart-header">
       <h1 class="cart-title">Your Cart</h1>
-      <a href="../html/Main.html#products" class="continue-shopping">&larr; Continue Shopping</a>
+      <div class="cart-header-actions">
+        <a href="../html/Main.html#products" class="continue-shopping">&larr; Continue Shopping</a>
+        <button class="clear-cart-btn" onclick="clearCart()">
+          <i class="fa-solid fa-trash"></i> Clear All
+        </button>
+      </div>
     </div>
 
     <div class="cart-container">
-      <div class="cart-items">
+      <div class="cart-items" id="cart-items">
         
         <div class="cart-item">
           <img src="../img/ethiopian yirgacheffe.jpg" alt="Ethiopian Yirgacheffe" class="cart-item-img" />
