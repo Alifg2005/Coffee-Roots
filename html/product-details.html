@@ -24,7 +24,7 @@
 
       <div class="nav-right">
         <div class="nav-search">
-          <span class="search-icon">&#128269;</span>
+          <i class="fa-solid fa-magnifying-glass" style="color: #6f5a3e;"></i>
           <input type="text" placeholder="Search products..." />
         </div>
       </div>
@@ -39,17 +39,17 @@
     <div class="product-details-container">
 
       <div class="product-image-card">
-        <img id="productImage" src="../img/ethiopian yirgacheffe.jpg" alt="Product Image" class="product-details-image" />
+        <img src="../img/ethiopian yirgacheffe.jpg" alt="Ethiopian Yirgacheffe" class="product-details-image" />
       </div>
 
       <div class="product-info-card">
-        <span class="product-badge" id="productCategoryBadge">Coffee Beans</span>
-        <h1 id="productName">Ethiopian Yirgacheffe</h1>
-        <p class="product-roast" id="productRoast">Light Roast</p>
+        <span class="product-badge">Coffee Beans</span>
+        <h1>Ethiopian Yirgacheffe</h1>
+        <p class="product-roast">Light Roast</p>
 
-        <div class="product-price" id="productPrice">$18.99</div>
+        <div class="product-price">$18.99</div>
 
-        <p class="product-description" id="productDescription">
+        <p class="product-description">
           Premium Ethiopian coffee beans with fruity aroma and smooth taste.
           Freshly roasted and carefully selected for a rich coffee experience.
         </p>
@@ -57,12 +57,11 @@
         <div class="product-meta">
           <div class="meta-item">
             <span class="meta-label">Category</span>
-            <strong id="productCategory">Coffee Beans</strong>
+            <strong>Coffee Beans</strong>
           </div>
-
           <div class="meta-item">
             <span class="meta-label">Stock</span>
-            <strong id="productStock">24 Available</strong>
+            <strong>24 Available</strong>
           </div>
         </div>
 
@@ -70,7 +69,6 @@
           <a href="../html/cart.html" class="buy-btn">
             <i class="fa-solid fa-cart-plus"></i> Add To Cart
           </a>
-
           <a href="../html/Main.html#products" class="back-btn">Back</a>
         </div>
       </div>
@@ -113,78 +111,6 @@
       </div>
     </div>
   </footer>
-
-<!--    this script runs a product details page  Instead of using a static HTML file, we use simple JavaScript code to dynamically populate the page with product information -->  
-  <script>
-    /* This is an object that stores all product data */
-    const products = {
-      ethiopian: {
-        name: "Ethiopian Yirgacheffe",
-        roast: "Light Roast",
-        price: "$18.99",
-        description: "Premium Ethiopian coffee beans with fruity aroma and smooth taste. Freshly roasted and carefully selected for a rich coffee experience.",
-        category: "Coffee Beans",
-        stock: "24 Available",
-        image: "../img/ethiopian yirgacheffe.jpg"
-      },
-      colombian: {
-        name: "Colombian Supremo",
-        roast: "Medium Roast",
-        price: "$16.99",
-        description: "Smooth Colombian coffee with balanced body and rich flavor notes. A classic choice for everyday coffee lovers.",
-        category: "Coffee Beans",
-        stock: "19 Available",
-        image: "../img/Colombian Supremo.jpg"
-      },
-      italian: {
-        name: "Italian Dark Roast",
-        roast: "Dark Roast",
-        price: "$15.99",
-        description: "Bold dark roast coffee with deep flavor and intense aroma. Perfect for those who enjoy strong coffee.",
-        category: "Coffee Beans",
-        stock: "5 Available",
-        image: "../img/Italian Dark Roast.jpg"
-      },
-      espresso: {
-        name: "Espresso Maker",
-        roast: "Brewing Equipment",
-        price: "$149.99",
-        description: "High-quality espresso maker designed for rich and smooth coffee extraction. Ideal for home brewing.",
-        category: "Brewing Equipment",
-        stock: "5 Available",
-        image: "../img/Espresso Maker.jpg"
-      },
-      saudi: {
-        name: "Saudi Coffee",
-        roast: "Traditional Roast",
-        price: "$19.99",
-        description: "Authentic Saudi coffee with traditional flavor and aromatic spices. A warm and cultural coffee experience.",
-        category: "Coffee Beans",
-        stock: "0 Available",
-        image: "../img/Saudi Roast.jpg"
-      }
-    };
-
-    /* Get the product key from the URL parameters */
-    const params = new URLSearchParams(window.location.search);
-    const productKey = params.get("product");
-
-    /* Check if the product key is  exists or not */
-    if (productKey && products[productKey]) {
-      const product = products[productKey];
-
-      /* find the html elements and populate them with product information by their id */
-      document.getElementById("productName").textContent = product.name;
-      document.getElementById("productRoast").textContent = product.roast;
-      document.getElementById("productPrice").textContent = product.price;
-      document.getElementById("productDescription").textContent = product.description;
-      document.getElementById("productCategory").textContent = product.category;
-      document.getElementById("productCategoryBadge").textContent = product.category;
-      document.getElementById("productStock").textContent = product.stock;
-      document.getElementById("productImage").src = product.image;
-      document.getElementById("productImage").alt = product.name;
-    }
-  </script>
 
 </body>
 </html>
