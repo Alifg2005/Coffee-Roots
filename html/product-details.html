@@ -114,7 +114,9 @@
     </div>
   </footer>
 
+  /* this script runs a product details page  Instead of using a static HTML file, we use simple JavaScript code to dynamically populate the page with product information */
   <script>
+    /* This is an object that stores all product data */
     const products = {
       ethiopian: {
         name: "Ethiopian Yirgacheffe",
@@ -163,12 +165,15 @@
       }
     };
 
+    /* Get the product key from the URL parameters */
     const params = new URLSearchParams(window.location.search);
     const productKey = params.get("product");
 
+    /* Check if the product key is  exists or not */
     if (productKey && products[productKey]) {
       const product = products[productKey];
 
+      /* find the html elements and populate them with product information by their id */
       document.getElementById("productName").textContent = product.name;
       document.getElementById("productRoast").textContent = product.roast;
       document.getElementById("productPrice").textContent = product.price;
