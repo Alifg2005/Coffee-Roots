@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Details | Coffee Roots</title>
+  <link rel="stylesheet" href="../css/admin-style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="navbar-inner">
+      <a href="../html/Main.html" class="logo">
+        <img src="../img/Coffee Roots.png" alt="Coffee Roots Logo" class="logo-img" />
+        <span class="logo-text">Coffee Roots</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../html/Main.html">Products</a>
+        <a href="../html/Main.html#contact">Contact</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="nav-search">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" placeholder="Search products..." />
+        </div>
+      </div>
+
+      <a href="../html/cart.html" class="icon-btn cart-btn" aria-label="Cart" title="Cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="product-details-page">
+    <div class="product-details-container">
+
+      <div class="product-image-card">
+        <img id="productImage" src="../img/ethiopian yirgacheffe.jpg" alt="Product Image" class="product-details-image" />
+      </div>
+
+      <div class="product-info-card">
+        <span class="product-badge" id="productCategoryBadge">Coffee Beans</span>
+        <h1 id="productName">Ethiopian Yirgacheffe</h1>
+        <p class="product-roast" id="productRoast">Light Roast</p>
+
+        <div class="product-price" id="productPrice">$18.99</div>
+
+        <p class="product-description" id="productDescription">
+          Premium Ethiopian coffee beans with fruity aroma and smooth taste.
+          Freshly roasted and carefully selected for a rich coffee experience.
+        </p>
+
+        <div class="product-meta">
+          <div class="meta-item">
+            <span class="meta-label">Category</span>
+            <strong id="productCategory">Coffee Beans</strong>
+          </div>
+
+          <div class="meta-item">
+            <span class="meta-label">Stock</span>
+            <strong id="productStock">24 Available</strong>
+          </div>
+        </div>
+
+        <div class="product-actions">
+          <a href="../html/cart.html" class="buy-btn">
+            <i class="fa-solid fa-cart-plus"></i> Add To Cart
+          </a>
+
+          <a href="../html/Main.html" class="back-btn">Back</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-col brand-col">
+        <div class="logo footer-logo">
+          <img src="../img/Coffee Roots.png" alt="logo" class="logo-img" />
+          <span>Coffee Roots</span>
+        </div>
+        <p>Sourced with care. Roasted with passion. Delivered fresh.</p>
+        <small>© 2026 Coffee Roots. All rights reserved.</small>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="../html/Main.html">Home</a>
+        <a href="../html/Main.html#products">Products</a>
+        <a href="../html/cart.html">Cart</a>
+        <a href="../html/Main.html#contact">Contact Us</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#">Coffee Beans</a>
+        <a href="#">Ground Coffee</a>
+        <a href="#">Blends</a>
+        <a href="#">Accessories</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia</p>
+        <p><i class="fa-solid fa-phone"></i> (+966) 55 444 777</p>
+        <p><i class="fa-solid fa-envelope"></i> coffeeroots@iau.edu.sa</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const products = {
+      ethiopian: {
+        name: "Ethiopian Yirgacheffe",
+        roast: "Light Roast",
+        price: "$18.99",
+        description: "Premium Ethiopian coffee beans with fruity aroma and smooth taste. Freshly roasted and carefully selected for a rich coffee experience.",
+        category: "Coffee Beans",
+        stock: "24 Available",
+        image: "../img/ethiopian yirgacheffe.jpg"
+      },
+      colombian: {
+        name: "Colombian Supremo",
+        roast: "Medium Roast",
+        price: "$16.99",
+        description: "Smooth Colombian coffee with balanced body and rich flavor notes. A classic choice for everyday coffee lovers.",
+        category: "Coffee Beans",
+        stock: "19 Available",
+        image: "../img/Colombian Supremo.jpg"
+      },
+      italian: {
+        name: "Italian Dark Roast",
+        roast: "Dark Roast",
+        price: "$15.99",
+        description: "Bold dark roast coffee with deep flavor and intense aroma. Perfect for those who enjoy strong coffee.",
+        category: "Coffee Beans",
+        stock: "5 Available",
+        image: "../img/Italian Dark Roast.jpg"
+      },
+      espresso: {
+        name: "Espresso Maker",
+        roast: "Brewing Equipment",
+        price: "$149.99",
+        description: "High-quality espresso maker designed for rich and smooth coffee extraction. Ideal for home brewing.",
+        category: "Brewing Equipment",
+        stock: "5 Available",
+        image: "../img/Espresso Maker.jpg"
+      },
+      saudi: {
+        name: "Saudi Coffee",
+        roast: "Traditional Roast",
+        price: "$19.99",
+        description: "Authentic Saudi coffee with traditional flavor and aromatic spices. A warm and cultural coffee experience.",
+        category: "Coffee Beans",
+        stock: "0 Available",
+        image: "../img/Saudi Roast.jpg"
+      }
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const productKey = params.get("product");
+
+    if (productKey && products[productKey]) {
+      const product = products[productKey];
+
+      document.getElementById("productName").textContent = product.name;
+      document.getElementById("productRoast").textContent = product.roast;
+      document.getElementById("productPrice").textContent = product.price;
+      document.getElementById("productDescription").textContent = product.description;
+      document.getElementById("productCategory").textContent = product.category;
+      document.getElementById("productCategoryBadge").textContent = product.category;
+      document.getElementById("productStock").textContent = product.stock;
+      document.getElementById("productImage").src = product.image;
+      document.getElementById("productImage").alt = product.name;
+    }
+  </script>
+
+</body>
+</html>
