@@ -5,35 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Product Details | Coffee Roots</title>
   <link rel="stylesheet" href="../css/admin-style.css" />
+  <link rel="stylesheet" href="../css/Super-style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <header class="navbar">
-    <div class="navbar-inner">
-      <a href="../html/Main.html" class="logo">
-        <img src="../img/Coffee Roots.png" alt="Coffee Roots Logo" class="logo-img" />
-        <span class="logo-text">Coffee Roots</span>
-      </a>
-
-      <nav class="nav-links">
-        <a href="../html/Main.html">Products</a>
-        <a href="../html/Main.html#contact">Contact</a>
-      </nav>
-
-      <div class="nav-right">
-        <div class="nav-search">
-          <span class="search-icon">&#128269;</span>
-          <input type="text" placeholder="Search products..." />
-        </div>
-      </div>
-
-      <a href="../html/cart.html" class="icon-btn cart-btn" aria-label="Cart" title="Cart">
-        <i class="fa-solid fa-cart-shopping"></i>
-      </a>
-    </div>
-  </header>
+  <!-- NAVBAR (injected by components.js) -->
+  <div id="navbar-placeholder"></div>
 
   <main class="product-details-page">
     <div class="product-details-container">
@@ -76,41 +55,14 @@
     </div>
   </main>
 
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="footer-col brand-col">
-        <div class="logo footer-logo">
-          <img src="../img/Coffee Roots.png" alt="logo" class="logo-img" />
-          <span>Coffee Roots</span>
-        </div>
-        <p>Sourced with care. Roasted with passion. Delivered fresh.</p>
-        <small>© 2026 Coffee Roots. All rights reserved.</small>
-      </div>
+  <!-- FOOTER (injected by components.js) -->
+  <div id="footer-placeholder"></div>
 
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="../html/Main.html">Home</a>
-        <a href="../html/Main.html#products">Products</a>
-        <a href="../html/cart.html">Cart</a>
-        <a href="../html/Main.html#contact">Contact Us</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Shop</h4>
-        <a href="#">Coffee Beans</a>
-        <a href="#">Ground Coffee</a>
-        <a href="#">Blends</a>
-        <a href="#">Accessories</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <p><i class="fa-solid fa-location-dot"></i> Imam Abdulrahman Bin Faisal University, Dammam, Saudi Arabia</p>
-        <p><i class="fa-solid fa-phone"></i> (+966) 55 444 777</p>
-        <p><i class="fa-solid fa-envelope"></i> coffeeroots@iau.edu.sa</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Set page type before loading shared components -->
+  <script>
+    const pageType = "customer";
+  </script>
+  <script src="../js/components.js"></script>
 
 </body>
 </html>
