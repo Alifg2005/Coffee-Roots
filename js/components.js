@@ -1,11 +1,7 @@
-// ============================================================
-// components.js - Shared Navbar & Footer for Coffee Roots
-// Navbar adapts based on pageType variable set in each page
-// ============================================================
 
-// ---------- NAVBAR (dynamic based on pageType) ----------
+//  NAVBAR (dynamic based on pageType) 
 function getNavbarHTML() {
-  // Shared section: logo + main nav links
+  // Shared section: logo and main nav links
   const sharedTop = `
     <a href="Main.html" class="logo">
       <img src="../img/Coffee Roots.png" alt="Coffee Roots Logo" class="logo-img" />
@@ -22,16 +18,24 @@ function getNavbarHTML() {
   let rightSide = "";
 
   if (pageType === "admin") {
-    // Admin dashboard: logout button only
+    // Admin view: search, logout and financial statements
     rightSide = `
       <div class="nav-right">
-        <span class="admin-label">Admin Panel</span>
+        <div class="nav-search">
+          <span class="search-icon">&#128269;</span>
+          <input type="text" placeholder="Search products..." />
+        </div>
+
         <a href="login.html" class="icon-btn logout-btn" aria-label="Logout" onclick="logout()">
           <i class="fa-solid fa-right-from-bracket"></i>
         </a>
+
+        <a href="#" class="icon-btn cart-btn" aria-label="Financial Statements">
+          <i class="fa-solid fa-file-invoice-dollar"></i>
+        </a>
       </div>
     `;
-  } 
+}
   else if (pageType === "guest") {
     // Login / signup pages: auth buttons
     rightSide = `
@@ -42,7 +46,7 @@ function getNavbarHTML() {
     `;
   } 
   else {
-    // Default customer view: search + account + cart
+    // Default customer view: search,account and cart
     rightSide = `
       <div class="nav-right">
         <div class="nav-search">
@@ -72,7 +76,7 @@ function getNavbarHTML() {
   `;
 }
 
-// ---------- FOOTER (same across all pages) ----------
+//  FOOTER (same page for all ) 
 const footerHTML = `
 <footer class="footer">
   <div class="footer-inner">
@@ -113,7 +117,7 @@ const footerHTML = `
 </footer>
 `;
 
-// ---------- SHARED LOGOUT FUNCTION ----------
+//  SHARED LOGOUT FUNCTION (used in admin navbar) 
 function logout() {
   // Clear session/user data
   localStorage.removeItem("user");
@@ -122,7 +126,7 @@ function logout() {
   window.location.href = "login.html";
 }
 
-// ---------- INJECT COMPONENTS INTO PAGE ----------
+//  INJECT COMPONENTS INTO PAGE 
 document.addEventListener("DOMContentLoaded", () => {
   // Fallback if pageType wasn't defined in the HTML page
   if (typeof pageType === "undefined") {
